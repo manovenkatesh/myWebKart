@@ -54,6 +54,10 @@ Following will be admin routes
 */
 
 
+/*Following will be user login related routes */
+$route['signup']='login/signup';
+$route['signup/addUser']='login/signup/addUser';
+
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
