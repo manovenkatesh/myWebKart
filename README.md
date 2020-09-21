@@ -1,2 +1,2 @@
 # myWebkart
-web kart app just a beginning
+just in starting stage
