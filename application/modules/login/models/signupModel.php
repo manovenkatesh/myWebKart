@@ -6,10 +6,14 @@ class signupModel extends CI_Model{
         parent::__construct();
     }
 
-    public function addUser($data){
-
-
-
+    public function insertData($table,$data){
+        try{
+            $this->db->insert($table,$data);
+            return $this->db->insert_id();
+        }
+        catch(\Exception $ex){
+            log_message('error','[ERROR] {exception}',['exception' =>$ex]);
+        }  
     }
 
 }
