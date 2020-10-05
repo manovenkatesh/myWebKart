@@ -58,6 +58,8 @@ Following will be admin routes
 $route['signup']='login/signup';
 $route['signup/addUser']='login/signup/addUser';
 
-$route['default_controller'] = 'welcome';
+$route['home']='home';
+
+$route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

@@ -16,4 +16,22 @@ class signupModel extends CI_Model{
         }  
     }
 
+    public function checkValueInTable($table,$column,$value){
+        try{
+            $this->db->select($column);
+            $this->db->from($table);
+            $this->db->where($column,$value);
+            $query=$this->db->get();
+            if($query->row()!== null){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch(\Exception $ex){
+            log_message('error','[ERROR] {exception}',['exception' =>$ex]);
+        }
+    }
+
 }
